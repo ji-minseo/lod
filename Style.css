@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@100;200;300;400;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
 * {
     margin : 0;
     padding: 0;
     box-sizing: border-box;
     color: #000;
+    font-family: 'Bellefair', serif;
+
 }
 body {
     background-color: #F2EBE6;
-    font-family: 'Abhaya';
+    font-family: 'Bellefair', serif;
 }
 
 img {
@@ -64,7 +67,7 @@ a:hover, a:active {
     width: 100%;
     height: 100%;
     overflow: auto;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
 }
 .flex {
     display: flex;
@@ -161,11 +164,7 @@ img {
 .pannel-02 {
     background-color: #D4C0B5;
 }
-#about p {
-    color :#8B4D2B;
-    font-size: 50px;
-    text-align: center;
-}
+
 #about img {
     /* border-radius: 40%; */
 
@@ -183,6 +182,9 @@ img {
 
     z-index: 2;
 }
+#img3 {
+    width: 298px;
+}
 #typo {
     position: absolute;
     left: 30%;
@@ -195,19 +197,21 @@ img {
 
 #text {
     position: absolute;
-    top:740px;
+    top:760px;
     left : 361px;
     width:406px;
+    font-size: 25px;
+    line-height: 29px;
     z-index: 3;
+    text-align: left;
 }
 
 #wrap {
     position:relative;
   width:100%;
-  height:100vh;
-  scroll-behavior:smooth;
+  /* scroll-behavior:smooth; */
 overflow:auto;
-scroll-snap-type: y mandatory;
+/* scroll-snap-type: y mandatory; */
 
 }
 #img1 {
@@ -217,6 +221,12 @@ scroll-snap-type: y mandatory;
 #img2 {
     position: relative;
     left:271;
+}
+
+#bar {
+    width: 292px;
+    animation: seesaw 3000ms infinite linear;
+
 }
 
 .section {
@@ -233,16 +243,27 @@ scroll-snap-type: y mandatory;
 
   .section:nth-child(3n+1) {
     background: #DCD4D2;
-    padding: 100px auto;    
+    padding: 300px auto; 
   }
   .section:nth-child(3n+2) {
     background: #2B423C;
-    height: 100vh;
-    padding: 100px auto;
+    padding: 300px auto;
   }
 
-  .section p {
-    width: 100%;
+  .section:nth-child(3n+3) {
+    background: #F4F3F1;
+    padding: 300px auto;
+    width: 4170px;
+  }
+
+  #lodabout {
+    font-family: 'Bellefair', serif;
+      width: 536px;
+      text-align: left;
+    font-size: 40px;
+    line-height: 45px;
+    color: #fff;
+
   }
 
 @media (max-width:768px) {
@@ -273,5 +294,16 @@ scroll-snap-type: y mandatory;
         transform: rotate(0deg); 
     } to { 
         transform: rotate(360deg); 
+    }
+}
+
+@keyframes seesaw { 
+    0% { 
+        transform: rotate(-20deg); 
+    } 50% { 
+        transform: rotate(20deg); 
+    }
+    100% { 
+        transform: rotate(-20deg); 
     }
 }
